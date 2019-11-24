@@ -58,13 +58,14 @@ main {
     flex-wrap:wrap;
 }
 main img {
-width: 300px;
-height: 300px;
-padding-bottom: 3%;
+width: 400px;
+height: 400px;
+border:3px solid #ddd;    
+border-radius: 5%;
 }
 footer{
-	background-color: #434445;
-	height: 68px;
+	background-color: #dae0e5;
+	height: 80px;
 	font-family: sans-serif;
 	font-size: 20px;
 	font-style:italic;
@@ -73,6 +74,5 @@ footer{
 	justify-content: center;
 	align-items: center;
 }
-
 
 
