@@ -1,2 +1,2 @@
-# pink-panther
+﻿# pink-panther
 личный сайт 
