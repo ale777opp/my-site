@@ -1,7 +1,15 @@
 *{	 
     margin: 0;
 	padding: 0;
-}	
+}
+body {   
+background-image: url(../image/4430193_large.jpg);      
+background-position: center center;      
+background-repeat: no-repeat;      
+background-attachment: fixed;      
+background-size: cover;      
+background-color:rgba(0,0,0, 0.5); /*#464646; */
+}
 .photo {
 border: 3px solid #ddd; 
 max-height: 500px;
@@ -22,7 +30,7 @@ p {
 	font-weight:100;
 	font-style:italic;
 	line-height: 36px;
-	text-align:left;
+    text-align: center;
 }	
 .photo_main {
 		width: 350px;
