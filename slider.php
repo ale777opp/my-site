@@ -7,98 +7,98 @@ include 'site_components/head.php';
 <p> </p>
 	    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner ">
-        <div class="carousel-item active" align="center">
-        <img src="site_components/image/slider/IMG_20190705_134459_HDR.jpg" class="photo" alt="Саня">
+        <div class="carousel-item active">
+        <img src="site_components/image/slider/IMG_20190705_134459_HDR.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/IMG_6036_1.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/IMG_6036_1.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6290309.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6290309.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6290394.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6290394.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6290396.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6290396.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6290400.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6290400.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6290404.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6290404.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6290418.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6290418.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6300462.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6300462.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P6300534.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6300534.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P7010629.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7010629.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P7010630.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7010630.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P7010631.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7010631.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P7030882.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7030882.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P7030889.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7030889.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P7030926.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7030926.jpg" class="img-fluid" alt="Саня">
         </div>
-        <div class="carousel-item" align="center">
-        <img src="site_components/image/slider/P7051078.jpg" class="photo" alt="Саня">
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7051078.jpg" class="img-fluid" alt="Саня">
         </div>
 
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P6300451.jpg" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P6300451.jpg" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P6290300.jpg" class="photo" alt="P6290300.jpg">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P6290300.jpg" class="img-fluid" alt="P6290300.jpg">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P1015683.JPG" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P1015683.JPG" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P1015612.JPG" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P1015612.JPG" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P1015685.JPG" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P1015685.JPG" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P1015783.JPG" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P1015783.JPG" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P1015721.JPG" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P1015721.JPG" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P1015725.JPG" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P1015725.JPG" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P7010721.jpg" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P7010721.jpg" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P7010723.jpg" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P7010723.jpg" class="img-fluid" alt="Саня">
             </div>
-            <div class="carousel-item" align="center">
-            <img src="site_components/image/slider/P7051067_1.jpg" class="photo" alt="Саня">
+            <div class="carousel-item">
+            <img src="site_components/image/slider/P7051067_1.jpg" class="img-fluid" alt="Саня">
             </div>
  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="btn btn-outline-dark">Предыдущий</span>
+    <span class="sr-only">Предыдущий</span>
     </a>
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="btn btn-outline-dark">Следующий</span>
+    <span class="sr-only">Следующий</span>
   </a>
    	</div>	
 </div>	    
