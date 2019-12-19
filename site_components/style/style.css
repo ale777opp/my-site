@@ -3,18 +3,22 @@
 	padding: 0;
 }
 body {   
-background-image: url(../image/4430193_large.jpg);      
+background-image: url(../image/4430193_large_t50.jpg);      
 background-position: center center;      
 background-repeat: no-repeat;      
 background-attachment: fixed;      
 background-size: cover;      
-background-color:rgba(0,0,0, 0.5); /*#464646; */
+/*background-color:rgba(0,0,0, 0.5); #464646; */
 }
 .photo {
 border: 3px solid #ddd; 
-max-height: 500px;
+  display: inline-block;
+  max-height: 500px;
+  max-width: 100%;
+
+/*height: auto;
 width: 800px;
-align-items:center;
+align-items:center;*/
 }
 footer {
 background-color: #dfdfdf; 
@@ -35,7 +39,7 @@ p {
 .photo_main {
 		width: 350px;
 		height: 350px;
-		border:5px solid #ddd;    
+		border:5px solid #003399;    
 		border-radius: 50%;
 		box-shadow: 0 2px 5px #aaa;
 		margin: 5% auto;
