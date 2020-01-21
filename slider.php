@@ -92,13 +92,13 @@ include 'site_components/head.php';
             <div class="carousel-item">
             <img src="site_components/image/slider/P7051067_1.jpg" class="img-fluid" alt="Саня">
             </div>
- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Предыдущий</span>
-    </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Следующий</span>
+  </a>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Предыдущий</span>
   </a>
    	</div>	
 </div>	    
