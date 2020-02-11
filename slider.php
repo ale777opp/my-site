@@ -8,6 +8,9 @@ include 'site_components/head.php';
 	    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner ">
         <div class="carousel-item active">
+        <img src="site_components/image/slider/PANO_20190705_122739.jpg" class="img-fluid" alt="Саня">
+        </div>    
+        <div class="carousel-item ">
         <img src="site_components/image/slider/IMG_20190705_134459_HDR.jpg" class="img-fluid" alt="Саня">
         </div>
         <div class="carousel-item">
@@ -58,40 +61,39 @@ include 'site_components/head.php';
         <div class="carousel-item">
         <img src="site_components/image/slider/P7051078.jpg" class="img-fluid" alt="Саня">
         </div>
-
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P6300451.jpg" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P6290300.jpg" class="img-fluid" alt="P6290300.jpg">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P1015683.JPG" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P1015612.JPG" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P1015685.JPG" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P1015783.JPG" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P1015721.JPG" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P1015725.JPG" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P7010721.jpg" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P7010723.jpg" class="img-fluid" alt="Саня">
-            </div>
-            <div class="carousel-item">
-            <img src="site_components/image/slider/P7051067_1.jpg" class="img-fluid" alt="Саня">
-            </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6300451.jpg" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6290300.jpg" class="img-fluid" alt="P6290300.jpg">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P1015683.JPG" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P1015612.JPG" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P1015685.JPG" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P1015783.JPG" class="img-fluid" alt="Саня">
+        </div>
+            <!-- <div class="carousel-item">
+            <img src="site_components/image/slider/P1015721.JPG" class="photo" alt="Саня">
+            </div> -->
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P1015725.JPG" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7010721.jpg" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7010723.jpg" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P7051067_1.jpg" class="img-fluid" alt="Саня">
+        </div>
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Следующий</span>
