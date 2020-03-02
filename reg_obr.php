@@ -1,9 +1,10 @@
 <?php
+session_start();
 if(empty($_POST['name']) or empty($_POST['lastname']) or empty($_POST['login']) or empty($_POST['pass'])) exit("Не все поля заполнены");
     
 $dbhost='localhost';// хост базы
 $dbuser='v903177m_edu';// пользователь базы
-$dbpass='H&g%6OeF';//пароль входа в БД
+$dbpass='QqQ6n&1h';//пароль входа в БД
 $dbname='v903177m_edu';//имя БД
 $mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 $mysqli-> set_charset("utf8");

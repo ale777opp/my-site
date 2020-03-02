@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body {   
-background-image: url(../image/4430193_large_t50.jpg);      
+background-image: url(../image/4430193_large_t25.jpg);      
 background-position: center center;      
 background-repeat: no-repeat;      
 background-attachment: fixed;      
@@ -12,7 +12,7 @@ background-size: cover;
 }
 .carousel-inner img {
   display: block;
- /* width: 1000px;  */
+ /* width: 1000px; */
   height: 520px !important;
   margin: 0 auto;
     }
@@ -35,7 +35,7 @@ p {
 .photo_main {
 		width: 350px;
 		height: 350px;
-		border:5px solid #003399;    
+		border:5px solid #ddd;    
 		border-radius: 50%;
 		box-shadow: 0 2px 5px #aaa;
 		margin: 5% auto;

@@ -9,10 +9,15 @@ $title='Проект "DeskNote"';
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
     <title>Проект "DeskNote"</title>
   <style>
   body{
-        background-color:#33ffCC;
+    background-image: url(../site_components/image/cork-board-background.jpg);      
+    background-position: center center;      
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+    background-size: cover;      
     } 
    .pack {
       width:150px;
@@ -35,26 +40,27 @@ $title='Проект "DeskNote"';
       box-shadow: 0.4em 0.4em 10px rgba(122,122,122,0.5);
       position:fixed;
       cursor:pointer;
+      word-break: break-all;
     } 
-    .fa-pencil{
+    .pencil,.del{
         cursor:pointer;
         color:blue;
     }
-    .fa-pencil:hover{
-        color:DeepSkyBlue;
+    .pencil:hover,.del:hover{
+    color:DeepSkyBlue;
     }
-    .fa-refresh{
+    .refreshEdit{
         cursor:pointer;
         color:green;
     }
-    .fa-refresh:hover {
+    .refreshEdit:hover {
         color:lime;
     }
-    .fa-ban{
+    .banEdit{
         cursor:pointer;
         color:darkred;
     }
-    .fa-ban:hover {
+    .banEdit:hover {
         color:red;
     }
   </style>
@@ -70,71 +76,92 @@ $title='Проект "DeskNote"';
 <?php 
 $dbhost='localhost';// хост базы
 $dbuser='v903177m_edu';// пользователь базы
-$dbpass='H&g%6OeF';//пароль входа в БД
+$dbpass='QqQ6n&1h';//пароль входа в БД
 $dbname='v903177m_edu';//имя БД
 $mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 $mysqli-> set_charset("utf8");
 
 $result = $mysqli->query("SELECT * FROM `text_note`");
-$id=$_SESSION['id'];
-$color=$_SESSION['color'];
-$x_coord=$_SESSION['x_coord'];
-$y_coord=$_SESSION['y_coord'];
-$text_note=$_SESSION['text_note'];
 
-while ($row = $result->fetch_assoc())
-    echo '<div class="note" style="background:#'.$row['color'].'; top:'.$row['y_coord'].'px; left:'.$row['x_coord'].'px;">  
-            <div class="note_bonnet" title="Элементы редактирования" style="padding-top:4px;">
-            <button><i class="fa fa-pencil" aria-hidden="true"></i></button>  <button><i class="fa fa-refresh" aria-hidden="true"></i></button>
-            <button><i class="fa fa-ban" aria-hidden="true"></i></button><button onclick="is_Del()"><i>DEL</i></button>&nbsp;#<span>'.$row['id'].'</span>
+while ($row = $result->fetch_assoc()) {
+    echo '<div class="note" id="'.$row['id'].'" style="background:#'.$row['color'].'; top:'.$row['y_coord'].'px; left:'.$row['x_coord'].'px;">  
+            <div title="Элементы редактирования" style="padding-top:4px;">
+            <button class="pencil"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button class="refresh" disabled><i class="fa fa-refresh" aria-hidden="true"></i></button>
+            <button class="ban" disabled><i class="fa fa-ban" aria-hidden="true"></i></button>
+            <button class="del"; onclick="is_Del()"><i>DEL</i></button>
+            &nbsp;#<span>'.$row['id'].'</span>
             <hr>
             </div>
-            <div class="note_main">
+            <div>
                 <span> '.$row['text_note'].' </span> 
             </div>
           </div>';
-
+}
 ?>
 
 <script>
+/*$('.el').click(function(){
+    $(this).toggleClass('active');
+}); */
     let notes=document.getElementsByClassName("note");
-    let notes_main=document.getElementsByClassName('note_main');
-    let pencils=document.getElementsByClassName('fa-pencil');
-    let cancels=document.getElementsByClassName('fa-ban');
-    let confirms=document.getElementsByClassName('fa-refresh');    
+    let pencils=document.getElementsByClassName('pencil');
+    let cancels=document.getElementsByClassName('ban');
+    let confirms=document.getElementsByClassName('refresh'); 
+    let dels=document.getElementsByClassName('del');
     
 for (let i=0;i<notes.length;i++){
-        notes[i].addEventListener('mousedown', dragAndDrop);
+    //("редакция");
         pencils[i].addEventListener('click',()=>{
-        text=notes_main[i].children[0].innerText;     
-        notes_main[i].innerHTML=`<textarea class="form-control" aria-label="With textarea" maxlength="160" cols="20" rows="8">${text}</textarea>`; 
+        text=notes[i].children[1].innerText;     
+        notes[i].children[1].innerHTML=`<textarea class="form-control" aria-label="With textarea" maxlength="210" cols="24" rows="9">${text}</textarea>`; 
+       
         pencils[i].style.display='none';
-        notes_main[i].children[0].innerText=text;
-       //("редакция");
+        dels[i].style.display='none';
+        
+        cancels[i].disabled=false;
+        confirms[i].disabled=false;
+        
+        cancels[i].classList.add('banEdit');
+        confirms[i].classList.add('refreshEdit');
         });
+    //("отмена");        
         cancels[i].addEventListener('click',()=>{
-        //notes_main[i].children[0].innerText=text;    
-        notes_main[i].innerHTML=`<span>${text}</span>`;
+        notes[i].children[1].innerHTML=`<span>${text}</span>`;
+        
         pencils[i].style.display='inline';
-     //("отмена"); 
+        dels[i].style.display='inline';
+        
+        cancels[i].disabled=true;
+        confirms[i].disabled=true;
+        
+        cancels[i].classList.remove('banEdit');
+        confirms[i].classList.remove('refreshEdit');
         });
+    //("подтверждение");    
         confirms[i].addEventListener('click',()=>{ 
-        text=notes_main[i].children[0].value;
+        text=notes[i].children[1].children[0].value;
         send(id,text,note.offsetLeft,note.offsetTop);
+        notes[i].children[1].innerHTML=`<span>${text}</span>`;
+        
         pencils[i].style.display='inline';
-        notes_main[i].innerHTML=`<span>${text}</span>`;
-      //("подтверждение");
+        dels[i].style.display='inline';
+        
+        cancels[i].disabled=true;
+        confirms[i].disabled=true;
+        
+        cancels[i].classList.remove('banEdit');
+        confirms[i].classList.remove('refreshEdit');
         });
+notes[i].addEventListener('mousedown', dragAndDrop);        
 }
-
         function dragAndDrop(event) {
         note = event.currentTarget;
         id = note.children[0].children[4].innerText;
-        if (event.target!=note) return false;
+        if (event.target!=note) {return false};
         note.ondragstart = function() {return false;};
        
         moveAt(event.pageX, event.pageY);
-        document.addEventListener('mousemove', onMouseMove);
         
         function moveAt(pageX, pageY) {
         coord_x=pageX-note.offsetWidth/2;
@@ -146,7 +173,7 @@ for (let i=0;i<notes.length;i++){
         function onMouseMove(event) {
           moveAt(event.pageX, event.pageY);
         };
-        
+        document.addEventListener('mousemove', onMouseMove);
         note.onmouseup = function() {
           document.removeEventListener('mousemove', onMouseMove);
           text=note.children[1].innerText;
@@ -154,8 +181,7 @@ for (let i=0;i<notes.length;i++){
           note.onmouseup = null;
         };
      }; 
-     
-     
+
  function getXmlHttp(){
   let xmlhttp;
   try {
@@ -223,21 +249,9 @@ function is_Del (){
             else location.href ="desknote.php";
         };
 };
-
-    /*
-     note.style = "transform: rotate(90deg)";
-    <i class="fa fa-clock-o" aria-hidden="true"></i> *************часы
-    <i class="fa fa-thumb-tack" aria-hidden="true"></i> **************кнопка
-    bgcolor="#00FFFF"
-    position: relative; 
-    top: 40px; 
-    left: -70px; 
-    
-        */
 </script>    
- <!-- Optional JavaScript -->
+     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
  </body>

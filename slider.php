@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 $title='Слайд-шоу';
 include 'site_components/head.php';
 ?> 
@@ -21,6 +22,9 @@ include 'site_components/head.php';
         </div>
         <div class="carousel-item">
         <img src="site_components/image/slider/P6290394.jpg" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6300493_1.jpg" class="img-fluid" alt="Саня">
         </div>
         <div class="carousel-item">
         <img src="site_components/image/slider/P6290396.jpg" class="img-fluid" alt="Саня">
@@ -68,25 +72,31 @@ include 'site_components/head.php';
         <img src="site_components/image/slider/P6290300.jpg" class="img-fluid" alt="P6290300.jpg">
         </div>
         <div class="carousel-item">
-        <img src="site_components/image/slider/P1015683.JPG" class="img-fluid" alt="Саня">
+        <img src="site_components/image/slider/P6300526.jpg" class="img-fluid" alt="P6300526.jpg">
         </div>
         <div class="carousel-item">
-        <img src="site_components/image/slider/P1015612.JPG" class="img-fluid" alt="Саня">
+        <img src="site_components/image/slider/P1015683.jpg" class="img-fluid" alt="Саня">
         </div>
         <div class="carousel-item">
-        <img src="site_components/image/slider/P1015685.JPG" class="img-fluid" alt="Саня">
+        <img src="site_components/image/slider/P1015612.jpg" class="img-fluid" alt="Саня">
         </div>
         <div class="carousel-item">
-        <img src="site_components/image/slider/P1015783.JPG" class="img-fluid" alt="Саня">
+        <img src="site_components/image/slider/P1015685.jpg" class="img-fluid" alt="Саня">
         </div>
-            <!-- <div class="carousel-item">
-            <img src="site_components/image/slider/P1015721.JPG" class="photo" alt="Саня">
-            </div> -->
         <div class="carousel-item">
-        <img src="site_components/image/slider/P1015725.JPG" class="img-fluid" alt="Саня">
+        <img src="site_components/image/slider/P1015783.jpg" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P8101340.jpg" class="photo" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P1015725.jpg" class="img-fluid" alt="Саня">
         </div>
         <div class="carousel-item">
         <img src="site_components/image/slider/P7010721.jpg" class="img-fluid" alt="Саня">
+        </div>
+        <div class="carousel-item">
+        <img src="site_components/image/slider/P6300537.jpg" class="img-fluid" alt="Саня">
         </div>
         <div class="carousel-item">
         <img src="site_components/image/slider/P7010723.jpg" class="img-fluid" alt="Саня">
@@ -111,22 +121,8 @@ include 'site_components/head.php';
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

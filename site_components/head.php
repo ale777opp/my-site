@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel='stylesheet' href='site_components/style/style.css'>
     <title><?php echo $title?></title>
-<!--Yandex.Metrika counter -->
+
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -20,11 +21,13 @@
         clickmap:true,
         trackLinks:true,
         accurateTrackBounce:true,
-        webvisor:true
+        webvisor:true,
+        ecommerce:"dataLayer"
    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/55679959" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- Yandex.Metrika counter -->
+<!-- /Yandex.Metrika counter -->
+
  <script>
     function patch(){
         let div = document.createElement('div');
@@ -46,7 +49,7 @@
               
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-               <a class="nav-link" href="slider.php">Слайд-шоу<span class="sr-only">(current)</a> 
+               <a class="nav-link" href="slider.php">Мои фото<span class="sr-only">(current)</a> 
               </li>
               <?php if(empty($_SESSION['id'])): ?>
                 <li class="nav-item">

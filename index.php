@@ -5,11 +5,11 @@ include 'site_components/head.php';
 
 <div class="container-fluid">
 	    <div class="row" style="margin-top:55px;"> 
-	        <div class="col text-center">
+	        <div class="col-md text-center">
       	    <img src='site_components/image/IMG-20190801_300.jpg' class="photo_main" alt='Cаня'><!-- <img src="..." class="img-fluid" alt="Адаптивные изображения"> -->
             </div>
-		    <div class="col-8 my-5">
-            <p style="text-align: center;"> Привет!<br>Меня зовут Александр.<br> Это мой сайт-портфолио для поиска работы. Он демонстрирует, что я могу сделать в области фотографии, Photoshop-а, дизайна, back-end сайтов.
+		    <div class="col-md text-center">
+            <p> Привет!<br>Меня зовут Александр.<br> Это мой сайт-портфолио для поиска работы. Он демонстрирует, что я могу сделать в области фотографии, Photoshop-а, дизайна, back-end сайтов.
             Буду благодарен всем, кто зарегистрируется и оставит конструктивные замечания.
                 Регистрация на сайте и личный кабинет –элементы back-end сайта. </p>
             </div>
