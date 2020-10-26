@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+  margin: 0;
 	padding: 0;
   box-sizing: border-box;
 }
@@ -11,12 +11,13 @@ background-attachment: fixed;
 background-size: cover;
 /*background-color:rgba(0,0,0, 0.5); #464646; */
 }
-.carousel-inner img {
-  display: block;
- /* width: 1000px; */
-  height: 520px !important;
-  margin: 0 auto;
-    }
+.container-fluid {
+        height:100%;
+        padding-top:50px;
+}
+.carousel-item {
+margin:20px auto;
+}
 footer {
 background-color: #dfdfdf;
 height: 50px;
@@ -32,6 +33,7 @@ p {
 	font-style:italic;
 	line-height: 36px;
     text-align: center;
+    margin-top:10px;
 }
 .photo_main {
 		width: 350px;
@@ -88,15 +90,55 @@ p {
     cursor: default; /*  курсор в виде стрелки */
     color: #888;/* цвет текста серый */
     }
-@media screen and (min-width: 960px) {
-    .photo_main {
+
+@media screen and (max-width: 768px) {
+  div.row {
+    flex-wrap:wrap;
+    margin:15% auto;
+    }
+    .container-fluid {
+	padding-top: 5px;
+    }
+}
+@media screen and (min-width: 576px) {
+  img {
+    width: auto;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 768px){
+img {
+    width: auto;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 992px){
+  img {
+    width: auto;
+    height: 700px;
+  }
+  .photo_main {
     width: 450px;
     height: 450px;
   }
 }
-@media screen and (max-width: 768px) {
-    div.row {
-    flex-wrap:wrap;
-    margin:15% auto;
+@media screen and (min-width: 1200px) {
+  img {
+    width: auto;
+    height: 550px;
+  }
+  div.row{
+      margin:2%;
   }
 }
+@media screen and (min-width: 1600px) {
+  img {
+    width: auto;
+    height: 840px;
+  }
+  div.row{
+      margin:7%;
+}
+
+
+

@@ -65,8 +65,8 @@ function send(form){
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4)
             if (xmlhttp.status==200)
-                if (xmlhttp.responseText==0) info.innerText="Неверный логин/пароль";//window.open("lk.php") content.innerHTML=window.location.href="lk.php";
-                    else location.href="lk.php";
+                if (xmlhttp.responseText==0) info.innerText="Неверный логин/пароль";//window.open("lk.php") content.innerHTML=window.location.href="lk.php";"Неверный логин/пароль"
+                    else location.href="lk.php"; //{console.log("переход в личный кабинет");}
     };
 };
 </script>

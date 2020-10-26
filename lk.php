@@ -4,9 +4,9 @@ $title='Личный кабинет';
 include 'site_components/head.php';?> 
 
 <div class="container"><!-- my-5--> 
-    <h3 class="text-center"><br>Личный кабинет<br></h3>
-   <!--  <h2 class="text-center"><?php echo $_SESSION['name'];?> <?php echo $_SESSION['lastname'];?></h2> -->
-    <div class="row">
+    <h2 class="text-center" style ="padding:80px;">Личный кабинет</h2>
+    <h3 class="text-center"><?php echo $_SESSION['name'];?> <?php echo $_SESSION['lastname'];?></h3>
+    <div class="row" style="margin:0;">
         <div class="col-md-4 my-5"> 
             <div class="row">
                 <p>Имя<br> 
