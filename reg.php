@@ -4,7 +4,7 @@ $title='Регистрация';
 include 'site_components/head.php';?>
 
 
-<div style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+<div id="content" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
     <form class="form" onsubmit="send(this);return false;"> <!--  "action="reg_obr.php"  method="POST"    -->
 	   <h1 class="form_title"> Регистрация </h1>
 				 <div class="form_group">
@@ -21,14 +21,13 @@ include 'site_components/head.php';?>
                     <input required name="login" type="text" class="form_input" placeholder=" "> 
 					<label class="form_label">Логин</label>
                </div>
-				
-               <div class="form_group">
+			   <div class="form_group">
 				    <input required name="pass" type="password" class="form_input" placeholder=" ">
 					<label class="form_label">Пароль</label>
                </div> 
+			   <span id="info" style="color:red;"> </span>
 			   <input class="form-control btn btn-primary form_button" type="submit" value="Отправить" style="margin-top:30px"> <!--  -->
 	</form>
-	<span id="info" style="color:red;"> </span>
 </div>
 
 <footer class="fixed-bottom" style="background-color: #dfdfdf; height: 50px; font-size: 1em; font-family: sans-serif; font-style:italic"> <!-- page-footer font-small blue  -->
@@ -36,6 +35,7 @@ include 'site_components/head.php';?>
 </footer>
 
 <script>
+let content=document.getElementById('content');	
 function getXmlHttp(){
   let xmlhttp;
   try {
