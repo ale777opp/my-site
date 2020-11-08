@@ -2,57 +2,33 @@
 session_start();
 $title='Регистрация';  
 include 'site_components/head.php';?>
-<div class="container my-5">
-    <h1 class="text-center"> Регистрация </h1>
-    <div class="row justify-content-center" >
-        <div class="col-5 text-center" id="content">
-           <form onsubmit="send(this);return false;">    <!--  "action="reg_obr.php"  method="POST"    -->
-                <div class="form-group">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    <input required name="name" type="text" class="form-control" placeholder="Имя"> <!--id="inlineFormInputGroup"      -->
-                    </div> 
-                </div>   
-                <div class="form-group">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    <input required name="lastname" type="text" class="form-control" placeholder="Фамилия">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    <input required name="login" type="text" class="form-control" placeholder="Логин">
-                    </div>
-                    <span id="info" style="color:red;"> </span>
-                     
-                </div>   
-                <div class="form-group">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <i class="fa fa-key" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    <input required name="pass" type="password" class="form-control" placeholder="Пароль">
-                    </div>
-                </div>    
-                <input class="form-control btn btn-primary" type="submit" value="Отправить">
-            </form>
-        </div>
-    </div>
+
+
+<div style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+    <form class="form" onsubmit="send(this);return false;"> <!--  "action="reg_obr.php"  method="POST"    -->
+	   <h1 class="form_title"> Регистрация </h1>
+				 <div class="form_group">
+                    <input required name="name" type="text" class="form_input" placeholder=" "> 
+					<label class="form_label">Имя</label>
+               </div>
+	   
+			 <div class="form_group">
+                    <input required name="lastname" type="text" class="form_input" placeholder=" "> 
+					<label class="form_label">Фамилия</label>
+               </div>
+	   
+	          <div class="form_group">
+                    <input required name="login" type="text" class="form_input" placeholder=" "> 
+					<label class="form_label">Логин</label>
+               </div>
+				
+               <div class="form_group">
+				    <input required name="pass" type="password" class="form_input" placeholder=" ">
+					<label class="form_label">Пароль</label>
+               </div> 
+			   <input class="form-control btn btn-primary form_button" type="submit" value="Отправить" style="margin-top:30px"> <!--  -->
+	</form>
+	<span id="info" style="color:red;"> </span>
 </div>
 
 <footer class="fixed-bottom" style="background-color: #dfdfdf; height: 50px; font-size: 1em; font-family: sans-serif; font-style:italic"> <!-- page-footer font-small blue  -->
