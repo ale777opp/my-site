@@ -2,9 +2,6 @@
 session_start();
 if (empty($_POST['login']) or empty($_POST['pass'])) exit("Не все поля заполнены");
 
-$login=$_POST['login'];
-$pass=$_POST['pass'];
-
 $dbhost='localhost';// хост базы
 $dbuser='v903177m_edu';// пользователь базы
 $dbpass='';//пароль входа в БД
@@ -12,6 +9,12 @@ $dbname='v903177m_edu';//имя БД
 $mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 $mysqli-> set_charset("utf8");
 
+$login=$_POST['login'];
+$pass=$_POST['pass'];
+
+$login=strtolower($login);
+$login=htmlspecialchars($login);
+$pass = password_hash($pass, PASSWORD_BCRYPT);
 
 $result=$mysqli->query("SELECT * FROM `users` WHERE `login`='$login'");// AND `pass`='$pass'");
 $result=mysqli_fetch_assoc($result);
