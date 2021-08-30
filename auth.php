@@ -2,28 +2,26 @@
 session_start();
 $title='Авторизация';
 include 'site_components/head.php';
-?> 
+?>
 
 <div style="display: flex;justify-content: center;align-items: center;height: 100vh;">
     <form class="form" onsubmit="send(this);return false;">
 	   <h1 class="form_title"> Вход </h1>
 	           <div class="form_group">
-                    <input required name="login" type="text" class="form_input" placeholder=" "> 
+                    <input required name="login" type="text" class="form_input" placeholder=" ">
 					<label class="form_label">Логин</label>
                </div>
-				
+
                <div class="form_group">
 				    <input required name="pass" type="password" class="form_input" placeholder=" ">
 					<label class="form_label">Пароль</label>
-               </div> 
+               </div>
 			   <input class="form-control btn btn-primary form_button" type="submit" value="Войти" style="margin-top:30px"> <!--  -->
 	</form>
 	<span id="info" style="color:red;"> </span>
 </div>
 
-<footer class="fixed-bottom" style="background-color: #dfdfdf; height: 50px; font-size: 1em; font-family: sans-serif; font-style:italic"> 
- <div class="footer-copyright text-center py-3">© Copyright: <?php echo date("F Y");?> Шувалов Александр</div>
-</footer>
+<?php include 'site_components/footer.php'; ?>
 
 <script>
 function getXmlHttp(){

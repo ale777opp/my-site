@@ -1,17 +1,17 @@
 <?php
 session_start();
-$title='Личный кабинет';  
-include 'site_components/head.php';?> 
+$title='Личный кабинет';
+include 'site_components/head.php';?>
 
-<div class="container"><!-- my-5--> 
+<div class="container"><!-- my-5-->
     <h2 class="text-center" style ="padding:80px;">Личный кабинет</h2>
     <h3 class="text-center"><?php echo $_SESSION['name'];?> <?php echo $_SESSION['lastname'];?></h3>
     <div class="row" style="margin:0;">
-        <div class="col-md-4 my-5"> 
+        <div class="col-md-4 my-5">
             <div class="row">
-                <p>Имя<br> 
+                <p>Имя<br>
                 <span class="letter"> <?php echo $_SESSION['name'];?> </span>
-                <i class="fa fa-check-circle-o" aria-hidden="true"></i> 
+                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
                 <i class="fa fa-ban" aria-hidden="true"></i>
                 <br><span class="edit" style="cursor: pointer;"> Редактировать </span>
                 </p>
@@ -23,51 +23,49 @@ include 'site_components/head.php';?>
                 <i class="fa fa-ban" aria-hidden="true"></i>
                 <br><span class="edit" style="cursor: pointer;"> Редактировать</span>
             </div>
-        </div>   
+        </div>
     <div class="col-md-1 my-5"></div>
     <div class="col-md-6 my-5">
         <form onsubmit="send_comment(this);return false;"> <!--action="textarea1.php" method="post" -->
-           <div class="form-group"> 
+           <div class="form-group">
             <p class="btn btn-primary btn-lg btn-block">Введите ваш отзыв</p>
             <p><textarea rows="5" cols="45" name="comment" wrap="hard"><?php echo $_SESSION['comment'];?></textarea></p>
             <input type="submit" value="Отправить" class="btn btn-primary btn-lg btn-block">
            </div>
         </form>
-    </div>    
-    
     </div>
-</div>    
 
-<footer class="fixed-bottom" style="background-color: #dfdfdf; height: 50px; font-size: 1em; font-family: sans-serif; font-style:italic"> <!-- page-footer font-small blue  -->
- <div class="footer-copyright text-center py-3">© Copyright Шувалов Александр, <?php echo date("F Y");?> </div>
-</footer>
+    </div>
+</div>
+
+<?php include 'site_components/footer.php'; ?>
 
 <script>
     let edits=document.getElementsByClassName('edit');
     let cancels=document.getElementsByClassName('fa-ban');
     let confirms=document.getElementsByClassName('fa-check-circle-o');
     for (let i=0;i<edits.length;i++){
-        let text=edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText; 
+        let text=edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
         edits[i].addEventListener("click",()=>{
-        text=edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText; 
-        edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=`<input type="text" style="width:220px;" value="${text}">`;    
+        text=edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+        edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML=`<input type="text" style="width:220px;" value="${text}">`;
         edits[i].style.opacity='0.2';
         confirms[i].style.display='inline';
         cancels[i].style.display='inline';
         });
         cancels[i].addEventListener("click",()=>{
-        edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText=text;   
+        edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText=text;
         edits[i].style.opacity='1';
         confirms[i].style.display='none';
         cancels[i].style.display='none';
         });
         confirms[i].addEventListener("click",()=>{
         let text=edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.value;   //firstElementChild
-        send(text,i);  
-        edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText=text; 
+        send(text,i);
+        edits[i].previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText=text;
         });
     }
-    
+
 function getXmlHttp(){
   let xmlhttp;
   try {
@@ -92,7 +90,7 @@ function send(text,i){
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4)
             if (xmlhttp.status==200){
-                edits[i].previousElementSibling.innerText=text;   
+                edits[i].previousElementSibling.innerText=text;
                 edits[i].style.opacity='1';;
                 confirms[i].style.display='none';
                 cancels[i].style.display='none';

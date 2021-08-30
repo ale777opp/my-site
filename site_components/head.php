@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <!-- Required meta tags -->
@@ -36,7 +36,7 @@
     }
 </script>
    </head>
-  
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
           <a class="navbar-brand" href="index.php">Главная</a>
@@ -44,27 +44,27 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-              
+
+
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-               <a class="nav-link" href="slider.php">Мои фото<span class="sr-only">(current)</a> 
+               <a class="nav-link" href="slider.php">Мои фото<span class="sr-only">(current)</a>
               </li>
               <?php if(empty($_SESSION['id'])): ?>
                 <li class="nav-item">
                 <a class="nav-link disabled" href="lk.php">Личный кабинет</a>
-                </li> 
+                </li>
              <?php else: ?>
                  <li class="nav-item">
                 <a class="nav-link" href="lk.php">Личный кабинет</a>
-                </li> 
+                </li>
              <?php endif ?>
-             
+
               <li class="nav-item">
                 <a class="nav-link" href="#" onclick="patch()">Контакты</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" onclick="patch()">Отзывы</span></a>  
+                <a class="nav-link" href="#" onclick="patch()">Отзывы</span></a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,7 +78,7 @@
               </li>
             </ul>
             <?php if(empty($_SESSION['id'])): ?>
-            <a class ="btn btn-outline-primary mr-sm-2" href="auth.php">Вход</a> 
+            <a class ="btn btn-outline-primary mr-sm-2" href="auth.php">Вход</a>
             <a class ="btn btn-outline-primary my-2 my-sm-0" href="reg.php">Регистрация</a>
              <?php else: ?>
              <a class ="btn btn-outline-primary my-2 my-sm-0" href="exit.php">Выход</a>

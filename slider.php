@@ -1,153 +1,154 @@
+  <!--
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/beacon.png" type="image/png">
+    <link rel="icon" href="img/beacon.png" type="image/png">
+    -->
 <?php
 session_start();
 $title = 'Слайд-шоу';
 include 'site_components/head.php';
 ?>
 
-<div class="container-fluid">
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" align="center">
-      <div class="carousel-item active">
-        <img src="site_components/image/slider/PANO_20190705_122739.jpg" alt="PANO_20190705_122739.jpg">
-      </div>
-      <div class="carousel-item ">
-        <img src="site_components/image/slider/IMG_20190705_134459_HDR.jpg" alt="IMG_20190705_134459_HDR.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6216407_1.jpg" alt="P6216407_1.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6290309.jpg" alt="P6290309.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6290394.jpg" alt="P6290394.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6300493.jpg" alt="P6300493.jpg">
-      </div>
 
-<div class="carousel-item">
-        <img src="site_components/image/slider/PB050206_1.jpg" alt="PB050206_1.jpg">
-      </div>
+    <script defer src="js/jquery.min.js"></script>
+<!-- <title>стартовая страница слайдера</title> -->
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+    .container {
+        height: 100%;
+        width: 100%;
+    }
+    .content {
+        max-width: 950px;
+        margin: 0 auto;
+    }
+    .photo_main {
+        border:3px #7f7f7f solid;
+        border-radius: 20px;
+        margin:5px;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.6);
+        z-index: 1000;
+    }
+    .modal .modal_content {
+        /* background-color: #fefefe; */
+        margin: 50px auto 0 auto;
+        padding: 10px;
+        border: 1px solid #888;
+        width: 80%;
+        /*z-index: 99999;*/
+        height: 50rem;
+    }
+    .modal .modal_content #close_modal_window {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .table{
+        display:grid;
+        grid-template-rows: repeat(auto-fit, 210px); /* 4 строки */
+        /*grid-template-columns: 25% 25% 25% 25%; /* 4 столбца */
+        grid-template-columns: repeat(auto-fit, 25%);
+        justify-content: center;
+        /* max-width: 400px; */
+    }
 
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6290396.jpg" alt="P6290396.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6290400.jpg" alt="P6290400.jpg">
-      </div>
+</style>
+</head>
+<body>
+<?php
+    $max_size =200;
+    //$IMG_PATH = str_replace('\thumbnails_2','\images',__DIR__);
+    define ('IMG_PATH',str_replace('\thumbnails_2','\images',__DIR__));
+    //echo IMG_PATH."\n";
+    try {
+    $dir_content = scandir(IMG_PATH);
+    //echo "<pre>";print_r($dir_content);echo "</pre>";
+    }
+    catch(Exception $e){
+    echo "Нераспознанная ошибка: $e";
+    }
+    finally{}
+?>
 
-<div class="carousel-item">
-        <img src="site_components/image/slider/P7091317.jpg" alt="P7091317.jpg">
-      </div>
-
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6290404.jpg" alt="P6290404.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6290418.jpg" alt="P6290418.jpg">
-      </div>
-
-<div class="carousel-item">
-        <img src="site_components/image/slider/P9281359.jpg" alt="P9281359.jpg">
-      </div>
-
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6300462.jpg" alt="P6300462.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6300534.jpg" alt="P6300534.jpg">
-      </div>
-
-<div class="carousel-item">
-        <img src="site_components/image/slider/P9281361.jpg" alt="P9281361.jpg">
-      </div>
-
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7010629.jpg" alt="P7010629.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7010630.jpg" alt="P7010630.jpg">
-      </div>
-
-<div class="carousel-item">
-        <img src="site_components/image/slider/PB131394.jpg" alt="PB131394.jpg">
-      </div>
-
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7010631.jpg" alt="P7010631.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7030882.jpg" alt="P7030882.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7030889.jpg" alt="P7030889.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7030926.jpg" alt="P7030926.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7051078.jpg"alt="P7051078.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6300451.jpg" alt="P6300451.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6290300.jpg" alt="P6290300.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6300526.jpg" alt="P6300526.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P1015683.jpg" alt="P1015683.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P1015612.jpg" alt="P1015612.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P1015685.jpg" alt="P1015685.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P1015783.jpg" alt="P1015783.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P8101340.jpg" alt="P8101340.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P1015725.jpg" alt="P1015725.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7010721.jpg" alt="P7010721.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P6300537.jpg" alt="P6300537.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7010723.jpg" alt="P7010723.jpg">
-      </div>
-      <div class="carousel-item">
-        <img src="site_components/image/slider/P7051067_1.jpg" alt="P7051067_1.jpg">
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="text-info">Предыдущий</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="text-info">Следующий</span>
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </a>
+<div class="container">
+  <div class="content" style="align-items:center">
+    <div id="my_modal" class="modal">
+    <div id="modal_content" class="modal_content">
+      <span id="close_modal_window">×</span>
     </div>
-  </div>
+    </div>
 
-  <footer class="fixed-bottom">
-    <div class="footer-copyright text-center py-3">© Copyright Шувалов Александр, <?php echo date("F Y"); ?></div>
-  </footer>
+<div class="table" style="width: 100%">
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+<?php
+foreach ($dir_content as $file_name) {
+    if (!is_dir($file_name)) {
+//echo "Нераспознанная ошибка:$file_name";
+    //$file_name = str_replace('..', '', $file_name);
+    $file_name = IMG_PATH.'\\'.$file_name;
+    //echo $file_name."\n";
+    if (!is_file($file_name)) {
+    echo 'Ошибка: файл не найден';
+    exit();
+    }
+    echo "<div class='photo_main' align=center>";
+    echo "<img onclick='selected()' src='preview.php?src=${file_name}' alt='webcam_5629.png'>";
+    echo "</div>";
+    }
+}
+?>
 
-  </html>
+</div> <!-- table-->
+</div> <!-- content -->
+</div> <!-- container -->
+
+<?php include 'site_components/footer.php'; ?>
+
+<script type="text/javascript">
+
+function selected() {
+let url = event.target.src;
+let basename = url.split('slider');
+basename = basename[2].split('\\');
+let filename = `../${basename.join('/')}`;
+let modal = $('#my_modal')[0];
+let span = $('#close_modal_window')[0];
+modal.style.display = "block";
+//modal.attr('style', 'display = "block";');
+$('#modal_content').attr('style', `background: url(${filename}) 100% 100% no-repeat; background-size: contain; background-position:center`);
+
+span.onclick = function () {
+    modal.style.display = "none";
+ }
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+}
+</script>
+</body>
+</html>

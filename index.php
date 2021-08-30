@@ -15,10 +15,7 @@ include 'site_components/head.php';
             </div>
 		</div>
 </div>
-<footer class="fixed-bottom"> 
- <div class="footer-copyright text-center py-3">© Copyright Шувалов Александр, <?php echo date("F Y");?> </div>
-</footer>
-
+<?php include 'site_components/footer.php'; ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
