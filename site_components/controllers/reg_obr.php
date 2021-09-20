@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 if(empty($_POST['name']) or empty($_POST['lastname']) or empty($_POST['login']) or empty($_POST['pass'])) exit("Не все поля заполнены");
 
 $dbhost='localhost';// хост базы

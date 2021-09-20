@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 $comment=$_POST['comment'];
 $id=$_SESSION['id'];
 
@@ -9,8 +9,8 @@ $id=$_SESSION['id'];
     $dbname='v903177m_edu';//имя БД
     $mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
     $mysqli-> set_charset("utf8");
-    
-    $query="UPDATE `users` SET `comments`='$comment' WHERE `id`='$id'";
-    $mysqli->query($query);
-    $_SESSION['comment']=$comment; 
+
+$query="UPDATE `users` SET `comments`='$comment' WHERE `id`='$id'";
+$mysqli->query($query);
+$_SESSION['comment']=$comment;
 ?>
