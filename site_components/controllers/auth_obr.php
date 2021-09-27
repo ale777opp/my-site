@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once($_SESSION['PATH_MAIN']."\const.php");
-echo "<pre>POST => ";print_r($_POST);echo "</pre><br>";
 if (empty($_POST['login']) or empty($_POST['pass'])) exit("Не все поля заполнены");
 //echo "<pre>POST => ";print_r($_POST);echo "</pre><br>";
 $dbhost = DBHOST;

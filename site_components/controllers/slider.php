@@ -14,7 +14,14 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
     }
     finally{}
 ?>
-
+<!--
+<script type="text/javascript">
+    $(img).on("load", function(){
+                $('.img').css('background-image', 'url(' + imglist[index-1] + ')');
+                $('.loading').hide();
+            });
+</script>
+-->
 <div class="container">
   <div class="content" style="align-items:center">
     <div id="my_modal" class="modal">
@@ -23,7 +30,7 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
     </div>
   </div>
 
-<div class="table" style="width: 100%">
+<div class="table"> <!-- style="width: 100%" -->
 
 <?php
 foreach ($dir_content as $file_name) {

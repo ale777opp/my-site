@@ -1,15 +1,13 @@
 <?php
 session_start();
 $_SESSION['PATH_MAIN'] =__DIR__;
-//echo "<pre>сессия";print_r($_SESSION['PATH_MAIN']."\const.php");echo "</pre><br>";
 require_once($_SESSION['PATH_MAIN']."\const.php");
-
+/*
 spl_autoload_register(function($controller){
-    require_once PATH_CONTROL.$controller. '.php';
+require_once PATH_CONTROL.$controller. '.php';
 });
-//echo "<pre>";print_r(PATH_COMPONENTS);echo "</pre>";
+*/
 $title='Сайт - презентация';
-//echo "<pre>head";print_r(PATH_COMPONENTS.'head.php');echo "</pre><br>";
 include PATH_COMPONENTS.'head.php';
 ?>
 

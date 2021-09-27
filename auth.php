@@ -6,7 +6,7 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
 ?>
 
 <div style="display: flex;justify-content: center;align-items: center;height: 100vh;">
-    <form class="form" onsubmit="send(this);return false;"> <!--  action="site_components/controllers/auth_obr.php" method="post"-->
+  <form class="form" onsubmit="send(this);return false;"> <!--  action="site_components/controllers/auth_obr.php" method="post"-->
 	   <h1 class="form_title"> Вход </h1>
 	           <div class="form_group">
                     <input required name="login" type="text" class="form_input" placeholder=" ">
@@ -50,7 +50,7 @@ function send(form){
     };
 //  alert (data);
     let xmlhttp=getXmlHttp();
-    xmlhttp.open("POST","site_components/controllers/auth_obr.php", true);
+    xmlhttp.open("POST", "site_components/controllers/auth_obr.php", true);
     xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xmlhttp.send(data);
     xmlhttp.onreadystatechange=function(){

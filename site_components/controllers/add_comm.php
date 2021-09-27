@@ -1,16 +1,14 @@
 <?php
-//session_start();
+session_start();
+require_once($_SESSION['PATH_MAIN']."\const.php");
 $comment=$_POST['comment'];
 $id=$_SESSION['id'];
 
-    $dbhost='localhost';// хост базы
-    $dbuser='v903177m_edu';// пользователь базы
-    $dbpass='';//пароль входа в БД
-    $dbname='v903177m_edu';//имя БД
-    $mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
-    $mysqli-> set_charset("utf8");
+$dbhost = DBHOST;
+$dbuser = DBUSER;
+$dbpass = DBPASS;
+$dbname = DBNAME;
 
-$query="UPDATE `users` SET `comments`='$comment' WHERE `id`='$id'";
-$mysqli->query($query);
-$_SESSION['comment']=$comment;
+$result = $mysqli->query("UPDATE `users` SET `comments`='$comment' WHERE `id`='$id'");
+if ($result) {$_SESSION['comment']=$comment;exit('1');} else exit('0'); //анализ выполнения запроса на добавление комментария
 ?>
