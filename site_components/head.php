@@ -4,9 +4,6 @@
     <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <!--
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
- -->
   <link rel="stylesheet" href="/<?=PATH_STYLE?>font-awesome.min.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/<?=PATH_STYLE?>bootstrap.min.css">
@@ -56,7 +53,7 @@
 
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="site_components/controllers/slider.php">Мои фото<span class="sr-only">(current)</a>
+                <a class="nav-link" href="/site_components/controllers/slider.php">Мои фото<span class="sr-only">(current)</a>
               </li>
               <?php if(empty($_SESSION['id'])): ?>
                 <li class="nav-item">
