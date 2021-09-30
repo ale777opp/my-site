@@ -23,7 +23,7 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
 </script>
 -->
 <div class="container">
-  <div class="content" style="align-items:center">
+  <div class="content">
     <div id="my_modal" class="modal">
     <div id="modal_content" class="modal_content">
       <span id="close_modal_window">×</span>
@@ -63,7 +63,7 @@ let modal = $('#my_modal')[0];
 let span = $('#close_modal_window')[0];
 modal.style.display = "block";
 //modal.attr('style', 'display = "block";');
-$('#modal_content').attr('style', `background: url(${filename}) 100% 100% no-repeat; background-size: contain; background-position:center`);
+$('#modal_content').attr('style', `background: url(${filename}) no-repeat; background-size: contain;`);
 
 span.onclick = function () {
     modal.style.display = "none";
