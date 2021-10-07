@@ -13,6 +13,5 @@
     <script defer src="site_components/js/jquery.min.js"></script>
     <script src="site_components/js/bootstrap.min.js"></script>
 -->
-  </body>
+</body>
 </html>
--->

@@ -11,12 +11,12 @@ $title='Сайт - презентация';
 include PATH_COMPONENTS.'head.php';
 ?>
 
-<div class="container-fluid"> <!-- style="height: calc(100vh - 100px)" -->
-	<div class="row">
-	  <div class="col-md col-xl-5 text-center">
-      <img src="<?=PATH_IMG?>IMG-20190801_300.jpg" class="photo_main" alt='IMG-20190801_300.jpg'>
-    </div>
-	    <div class="col-md col-xl-6 text-center">
+<div class="container-fluid">
+	<div class="row align-items-center align-self-center">
+	  <div class="col-xl-4 col-md" align="center">
+      	<img src="<?=PATH_IMG?>IMG-20190801_300.jpg" class="photo_main" alt='IMG-20190801_300.jpg'>
+      </div>
+	  <div class="col-xl-6 col-md align-self-center">
         <p> Привет!<br>Меня зовут Александр.<br> Это мой сайт-портфолио для поиска работы. Он демонстрирует, что я могу сделать в области фотографии, Photoshop-а, дизайна, back-end сайтов. Буду благодарен всем, кто зарегистрируется и оставит конструктивные замечания. Регистрация на сайте и личный кабинет –элементы back-end сайта.
         </p>
       </div>

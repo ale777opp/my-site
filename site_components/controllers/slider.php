@@ -23,7 +23,7 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
 </script>
 -->
 <div class="container">
-  <div class="content">
+  <!-- <div class="content"> -->
     <div id="my_modal" class="modal">
     <div id="modal_content" class="modal_content">
       <span id="close_modal_window">×</span>
@@ -47,7 +47,7 @@ foreach ($dir_content as $file_name) {
 ?>
 
 </div> <!-- table-->
-</div> <!-- content -->
+<!--</div>  content -->
 </div> <!-- container -->
 
 <?php include PATH_MAIN.PATH_COMPONENTS.'footer.php'; ?>
@@ -63,7 +63,7 @@ let modal = $('#my_modal')[0];
 let span = $('#close_modal_window')[0];
 modal.style.display = "block";
 //modal.attr('style', 'display = "block";');
-$('#modal_content').attr('style', `background: url(${filename}) no-repeat; background-size: contain;`);
+$('#modal_content').attr('style', `background: url(${filename}) no-repeat; background-size: contain;background-position: center center;`);
 
 span.onclick = function () {
     modal.style.display = "none";
