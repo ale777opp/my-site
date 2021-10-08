@@ -1,11 +1,13 @@
 <?php
-//session_start();
-    $dbhost='localhost';// хост базы
-    $dbuser='v903177m_edu';// пользователь базы
-    $dbpass='';//пароль входа в БД
-    $dbname='v903177m_edu';//имя БД
-    $mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
-    $mysqli-> set_charset("utf8");
+session_start();
+require_once($_SERVER['DOCUMENT_ROOT']."/const.php");
+$dbhost = DBHOST;
+$dbuser = DBUSER;
+$dbpass = DBPASS;
+$dbname = DBNAME;
+
+$mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
+$mysqli-> set_charset("utf8");
 
 $text=$_POST['text'];
 $field=$_POST['field'];

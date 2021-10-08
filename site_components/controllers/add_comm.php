@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once($_SESSION['PATH_MAIN']."\const.php");
+equire_once($_SERVER['DOCUMENT_ROOT']."/const.php");
 $comment=$_POST['comment'];
 $id=$_SESSION['id'];
 

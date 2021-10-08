@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once($_SESSION['PATH_MAIN']."\const.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/const.php");
 if(empty($_POST['name']) or empty($_POST['lastname']) or empty($_POST['login']) or empty($_POST['pass'])) exit("Не все поля заполнены");
 
 $dbhost = DBHOST;

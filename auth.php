@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once($_SESSION['PATH_MAIN']."\const.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/const.php");
 $title='Авторизация';
 include PATH_MAIN.PATH_COMPONENTS.'head.php';
 ?>

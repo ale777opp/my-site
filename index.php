@@ -1,7 +1,5 @@
 <?php
 session_start();
-//$_SESSION['PATH_MAIN'] = $_SERVER['DOCUMENT_ROOT']; //dirname(__FILE__);
-//echo "<pre>";print_r($_SERVER);echo "</pre>";
 require_once($_SERVER['DOCUMENT_ROOT']."/const.php");
 /*
 spl_autoload_register(function($controller){
