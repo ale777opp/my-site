@@ -1,14 +1,16 @@
 <?php
 session_start();
-$_SESSION['PATH_MAIN'] =__DIR__;
-require_once($_SESSION['PATH_MAIN']."\const.php");
+//$_SESSION['PATH_MAIN'] = $_SERVER['DOCUMENT_ROOT']; //dirname(__FILE__);
+//echo "<pre>";print_r($_SERVER);echo "</pre>";
+require_once($_SERVER['DOCUMENT_ROOT']."/const.php");
 /*
 spl_autoload_register(function($controller){
 require_once PATH_CONTROL.$controller. '.php';
 });
 */
+
 $title='Сайт - презентация';
-include PATH_COMPONENTS.'head.php';
+include PATH_MAIN.PATH_COMPONENTS.'head.php';
 ?>
 
 <div class="container-fluid">
@@ -23,7 +25,7 @@ include PATH_COMPONENTS.'head.php';
 	</div>
 </div>
 
-<?php include PATH_COMPONENTS.'footer.php'; ?>
+<?php include PATH_MAIN.PATH_COMPONENTS.'footer.php'; ?>
 
 </body>
 </html>

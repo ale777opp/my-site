@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once($_SESSION['PATH_MAIN']."\const.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/const.php");
 $title = 'Слайд-шоу';
 include PATH_MAIN.PATH_COMPONENTS.'head.php';
 
@@ -12,7 +12,7 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
     catch(Exception $e){
     echo "Ошибка сканирования: $e <br>";
     }
-    finally{}
+   // finally{}
 ?>
 <!--
 <script type="text/javascript">
@@ -49,7 +49,6 @@ foreach ($dir_content as $file_name) {
 </div> <!-- table-->
 <!--</div>  content -->
 </div> <!-- container -->
-
 <?php include PATH_MAIN.PATH_COMPONENTS.'footer.php'; ?>
 
 <script> //type="text/javascript"

@@ -5,7 +5,7 @@ define('DBPASS','root');//пароль входа в БД
 define('DBNAME','v903177m_edu');//имя БД
 
 define('IMG_SIZE',200);
-define('PATH_MAIN',__DIR__.'/');
+define('PATH_MAIN',$_SERVER['DOCUMENT_ROOT'].'/');
 define('PATH_COMPONENTS','site_components/');
 define('PATH_IMG','site_components/image/');
 define('PATH_STYLE','site_components/style/');
