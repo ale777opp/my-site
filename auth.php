@@ -6,18 +6,18 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
 ?>
 
 <div style="display: flex;justify-content: center;align-items: center;height: 100vh;">
-  <form class="form" onsubmit="send(this);return false;"> <!--  action="site_components/controllers/auth_obr.php" method="post"-->
+    <form class="form" onsubmit="send(this);return false;"> <!--  action="site_components/controllers/auth_obr.php" method="post"-->
 	   <h1 class="form_title"> Вход </h1>
-	           <div class="form_group">
-                    <input required name="login" type="text" class="form_input" placeholder=" ">
-					<label class="form_label">Логин</label>
-               </div>
-
-               <div class="form_group">
-				    <input required name="pass" type="password" class="form_input" placeholder=" ">
-					<label class="form_label">Пароль</label>
-               </div>
-			   <input class="form-control btn btn-primary form_button" type="submit" value="Войти" style="margin-top:30px"> <!--  -->
+        <span id="info" style="color:red;"> </span>
+	   <div class="form_group">
+            <input class="form_input" required name="login" type="text" placeholder="">
+			<label class="form_label">Логин</label>
+        </div>
+        <div class="form_group"> 
+		    <input class="form_input" required name="pass" type="password" placeholder="">
+			<label class="form_label">Пароль</label>
+        </div>
+        <input class="form-control btn btn-primary form_button" type="submit" value="Войти" style="margin-top:30px">
 	</form>
 	<span id="info" style="color:red;"> </span>
 </div>
@@ -57,7 +57,7 @@ function send(form){
         if (xmlhttp.readyState==4)
             if (xmlhttp.status==200)
                 if (xmlhttp.responseText==0) info.innerText="Неверный логин/пароль";//window.open("lk.php") content.innerHTML=window.location.href="lk.php";"Неверный логин/пароль"
-                    else location.href="lk.php"; //{console.log("переход в личный кабинет");}
+                    else location.href="lk.php"; // console.log("переход в личный кабинет"); //
     };
 };
 </script>

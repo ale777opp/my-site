@@ -1,7 +1,4 @@
 <?php
-/**
- *
- */
 class Controller
 {
 	public $name;
@@ -12,13 +9,15 @@ class Controller
 	private $dbuser;// пользователь базы
 	private $dbpass;//пароль входа в БД
 	private $dbname;//имя БД
+	private $dbport;//порт БД
 
 	function __construct() //$file = 'const.php'
 	{
-		$dbhost = DBHOST;
-		$dbuser = DBUSER;
-		$dbpass = DBPASS;
-		$dbname = DBNAME;
+		$dbhost = DB_HOST;
+		$dbuser = DB_USER;
+		$dbpass = DB_PASS;
+		$dbname = DB_NAME;
+		$dbport = DB_PORT;
 
 		echo "Вызов конструктора <br>";
 		try {

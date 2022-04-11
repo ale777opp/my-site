@@ -1,22 +1,26 @@
 <?php
 session_start();
-require_once($_SERVER['DOCUMENT_ROOT']."/const.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/db.ini");
 if (empty($_POST['login']) or empty($_POST['pass'])) exit("Не все поля заполнены");
-//echo "<pre>POST => ";print_r($_POST);echo "</pre><br>";
-$dbhost = DBHOST;
-$dbuser = DBUSER;
-$dbpass = DBPASS;
-$dbname = DBNAME;
 
-$mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
-$mysqli-> set_charset("utf8");
-//echo "<pre>POST => ";print_r($mysqli);echo "</pre><br>";
 $login=$_POST['login'];
 $pass=$_POST['pass'];
 
 $login=strtolower($login);
 $login=htmlspecialchars($login);
-//$pass = password_hash($pass, PASSWORD_BCRYPT);
+
+$dbhost = DB_HOST;
+$dbuser = DB_USER;
+$dbpass = DB_PASS;
+$dbname = DB_NAME;
+
+$mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
+if ($mysqli->connect_errno) {
+    printf("Соединение не удалось: %s\n", $mysqli->connect_error);
+    exit();
+}
+
+$mysqli-> set_charset("utf8");
 
 $result=$mysqli->query("SELECT * FROM `users` WHERE `login`='$login'");// AND `pass`='$pass'");
 $result=mysqli_fetch_assoc($result);
@@ -28,8 +32,6 @@ $_SESSION['name']= $result['name'];
 $_SESSION['lastname']= $result['lastname'];
 $_SESSION['comment']= $result['comments'];
 
-//echo "<pre>Pass => ";print_r($pass);echo "</pre><br>";
-//echo "<pre>POST => ";print_r($_SESSION);echo "</pre><br>";
 if(password_verify($pass,$result['pass'])) exit('1'); //"Вы успешно авторизованы"
 else exit('0'); //"Неверный логин или пароль"
 ?>

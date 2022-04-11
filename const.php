@@ -1,9 +1,4 @@
 <?php
-define('DBHOST','localhost');// хост базы
-define('DBUSER','root');// пользователь базыv903177m_edu'
-define('DBPASS','root');//пароль входа в БД
-define('DBNAME','v903177m_edu');//имя БД
-
 define('IMG_SIZE',200);
 define('PATH_MAIN',$_SERVER['DOCUMENT_ROOT'].'/');
 define('PATH_COMPONENTS','site_components/');

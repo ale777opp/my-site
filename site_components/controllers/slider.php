@@ -14,14 +14,8 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
     }
    // finally{}
 ?>
-<!--
-<script type="text/javascript">
-    $(img).on("load", function(){
-                $('.img').css('background-image', 'url(' + imglist[index-1] + ')');
-                $('.loading').hide();
-            });
-</script>
--->
+
+
 <div class="container">
   <!-- <div class="content"> -->
     <div id="my_modal" class="modal">
