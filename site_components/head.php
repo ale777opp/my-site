@@ -62,10 +62,12 @@ Yandex.Metrika counter -->
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Список проектов</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="desknote/desknote.php">DeskNote</a>
+                  <a class="dropdown-item" href="desknote/desknote.php">Drag&drop</a>
+				  <!--
                   <a class="dropdown-item" href="#" onclick="patch()">Кофе-машина</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" onclick="patch()">Парсер</a>
+				  -->
                 </div>
               </li>
             </ul>

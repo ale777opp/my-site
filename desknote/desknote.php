@@ -74,10 +74,14 @@ $title='Проект "DeskNote"';
 <div class="pack" onclick="location.href ='../index.php'"><i class="fa fa-sign-out fa-3x" aria-hidden="true"></i> Выход </div> 
 
 <?php 
-$dbhost='localhost';// хост базы
-$dbuser='v903177m_edu';// пользователь базы
-$dbpass='';//пароль входа в БД
-$dbname='v903177m_edu';//имя БД
+
+require_once($_SERVER['DOCUMENT_ROOT']."/db.ini");
+
+$dbhost = DB_HOST;
+$dbuser = DB_USER;
+$dbpass = DB_PASS;
+$dbname = DB_NAME;
+
 $mysqli=new mysqli($dbhost,$dbuser,$dbpass,$dbname);
 $mysqli-> set_charset("utf8");
 
