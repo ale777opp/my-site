@@ -9,11 +9,11 @@ class View
     }
     public function render(string $template)
     {
-        print_r('page = '.$template );
-        $template = "templates/" . $template . ".php";
-        print_r('page = '.$template );
-        if(is_readable($template )) {
-            include($template );
+        //print_r('page = '.$template);
+        $template = "templates/".$template.".php";
+        //print_r('page = '.$template);
+        if(is_readable($template)) {
+            include($template);
         }
     }
 }
