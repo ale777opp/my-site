@@ -6,26 +6,27 @@ $title = 'Основная страница';
 include 'head.php';
 ?>
 
-<header><h1> Основная страница </h1></header>
-<aside>Боковая панель</aside>
+<div class="grid_container">
 
-<article>Текст основной
+<header class="header"><h1> Основная страница </h1></header>
+<article class="article"><h2>Текст основной</h2>
 
-<div class="container-fluid">
-	<div class="row align-items-center align-self-center">
-		<div class="col-xl-4 col-md" align="center">
-			<img src="images/IMG-20190801_300.jpg" class="photo_main" alt='IMG-20190801_300.jpg'>
-		</div>
-		<div class="col-xl-6 col-md align-self-center">
-			<p> Привет!</p>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<img src="images/IMG-20190801_300.jpg" class="photo_main" alt='IMG-20190801_300.jpg'>
+			</div>
+			<div class="col">
+				<p> Привет!</p>
+			</div>
 		</div>
 	</div>
-</div>
 
 </article>
 
+<aside class="aside"><h2>Боковая панель</h2></aside>
+</div>
+
 <?php include 'footer.php'; ?>
-
 </body>
-
 </html>

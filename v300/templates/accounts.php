@@ -5,11 +5,10 @@ session_start();
 $title = ' Личный кабинет ';
 include 'head.php';
 ?>
+<div class="grid_container">
 
-<header><h1> Личный кабинет </h1></header>
-<aside>Боковая панель</aside>
-
-<article>Текст основной
+<header class="header"><h1> Личный кабинет </h1></header>
+<article class="article"><h2>Текст основной</h2>
 
 <div class="container">
 	<div class="content">
@@ -24,8 +23,9 @@ include 'head.php';
 
 </article>
 
+<aside class="aside"><h2>Боковая панель</h2></aside>
+</div>
+
 <?php include 'footer.php'; ?>
-
 </body>
-
 </html>
