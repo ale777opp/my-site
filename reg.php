@@ -9,26 +9,27 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
     <form class="form" onsubmit="send(this);return false;"> <!--  action="site_components/controllers/reg_obr.php" method="POST"     -->
 	   <h1 class="form_title"> Регистрация </h1>
      <span id="info" style="color:red;"> </span>
-				 <div class="form_group">
-                    <input required name="name" type="text" class="form_input" placeholder=" ">
-					<label class="form_label">Имя</label>
-               </div>
+				<div class="form_group">
+          <input required name="name" type="text" class="form_input" placeholder="Имя">
+				  <label class="form_label">Имя</label>
+        </div>
 
-			 <div class="form_group">
-                    <input required name="lastname" type="text" class="form_input" placeholder=" ">
+			  <div class="form_group">
+          <input required name="lastname" type="text" class="form_input" placeholder="Фамилия ">
 					<label class="form_label">Фамилия</label>
-               </div>
+        </div>
 
-	          <div class="form_group">
-                    <input required name="login" type="text" class="form_input" placeholder=" ">
+	      <div class="form_group">
+          <input required name="login" type="text" class="form_input" placeholder="Логин">
 					<label class="form_label">Логин</label>
-               </div>
-			   <div class="form_group">
-				    <input required name="pass" type="password" class="form_input" placeholder=" ">
-					<label class="form_label">Пароль</label>
-         </div>
+        </div>
+			  
+        <div class="form_group">
+				  <input required name="pass" type="password" class="form_input" placeholder="Пароль">
+				<label class="form_label">Пароль</label>
+        </div>
 	
-			   <input class="form-control btn btn-primary form_button" type="submit" value="Отправить" style="margin-top:30px"> <!--  -->
+			   <input class="form-control btn btn-primary form_button" type="submit" value="Отправить"> <!--  -->
 	</form>
 </div>
 

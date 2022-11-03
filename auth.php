@@ -10,14 +10,14 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
 	   <h1 class="form_title"> Вход </h1>
         <span id="info" style="color:red;"> </span>
 	   <div class="form_group">
-            <input class="form_input" required name="login" type="text" placeholder="">
+            <input class="form_input" required name="login" type="text" placeholder="Логин">
 			<label class="form_label">Логин</label>
         </div>
         <div class="form_group"> 
-		    <input class="form_input" required name="pass" type="password" placeholder="">
+		    <input class="form_input" required name="pass" type="password" placeholder="Пароль">
 			<label class="form_label">Пароль</label>
         </div>
-        <input class="form-control btn btn-primary form_button" type="submit" value="Войти" style="margin-top:30px">
+        <input class="form-control btn btn-primary form_button" type="submit" value="Войти">
 	</form>
 	<span id="info" style="color:red;"> </span>
 </div>
