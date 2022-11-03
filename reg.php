@@ -5,10 +5,9 @@ $title='Регистрация';
 include PATH_MAIN.PATH_COMPONENTS.'head.php';
 ?>
 
-<div id="content" style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+<div id="content" style="display: flex;flex-direction: column;justify-content: center;align-items: center;height: 100vh;">
     <form class="form" onsubmit="send(this);return false;"> <!--  action="site_components/controllers/reg_obr.php" method="POST"     -->
 	   <h1 class="form_title"> Регистрация </h1>
-     <span id="info" style="color:red;"> </span>
 				<div class="form_group">
           <input required name="name" type="text" class="form_input" placeholder="Имя">
 				  <label class="form_label">Имя</label>
@@ -31,6 +30,7 @@ include PATH_MAIN.PATH_COMPONENTS.'head.php';
 	
 			   <input class="form-control btn btn-primary form_button" type="submit" value="Отправить"> <!--  -->
 	</form>
+       <span id="info" style="color:red;"> </span>
 </div>
 
 <script>

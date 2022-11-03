@@ -5,10 +5,9 @@ $title='Авторизация';
 include PATH_MAIN.PATH_COMPONENTS.'head.php';
 ?>
 
-<div style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+<div style="display: flex;flex-direction: column;justify-content: center;align-items: center;height: 100vh;">
     <form class="form" onsubmit="send(this);return false;"> <!--  action="site_components/controllers/auth_obr.php" method="post"-->
 	   <h1 class="form_title"> Вход </h1>
-        <span id="info" style="color:red;"> </span>
 	   <div class="form_group">
             <input class="form_input" required name="login" type="text" placeholder="Логин">
 			<label class="form_label">Логин</label>
