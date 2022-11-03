@@ -52,6 +52,26 @@ if ( isset($this->routes[$this->httpUrl]) ) {
 public function setController($url) {
 //echo "<pre>";echo "setController url = ";print_r($url);echo "</pre>";
     $classSplit = explode('/', $url);
+/*
+$j = 0;
+foreach($classSplit as $value) {
+    if (j==0) $this->className = ucfirst($classSplit[0]);
+    if (j==1) $this->className = $classSplit[1];
+    if (j>1) (isset($classSplit[j+2]) $this->uriParams[$j-2] = $classSplit[$j];
+
+switch $j
+case 0: 
+    $this->className = ucfirst($classSplit[0]);
+    continue;
+case 0:     
+    if (j==1) $this->className = $classSplit[1];
+    continue;
+default:
+    if (isset($classSplit[j])  $this->uriParams[$j-2] = $classSplit[$j];  
+
+$j++;
+}
+*/    
     $this->className = ucfirst($classSplit[0]);
     //$this->classMethod = isset($classSplit[1]) ? $classSplit[1] : 'index';
     $this->classMethod = $classSplit[1];
