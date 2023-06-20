@@ -35,6 +35,12 @@ foreach ($dir_content as $file_name) {
     echo "<div class='photo_thumbnails' align=center>";
     echo "<img onclick='selected()' src='preview.php?src=${file_name}' alt='webcam_5629'>";
     echo "</div>";
+    /*
+    <figure>
+<img src=“a-man-coding.jpg” alt=“ Мужчина за компьютером”>
+<figcaption>Это изображение мужчины, который работает за компьютером</figcaption>
+</figure>
+    */
     }
     }
 }
